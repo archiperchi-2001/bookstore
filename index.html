@@ -60,6 +60,18 @@
 
   gtag('config', 'AW-18382212154');
 </script>
+  <button onclick="firebase.analytics().logEvent('deal_click')">
+View Deal
+</button>
+  <script>
+function logEvent() {
+firebase.analytics().logEvent('deal_click', {
+deal_type: 'Weekend Discount',
+page: 'Deals Page'
+});
+}
+</script>
+<button onclick="logEvent()">View Deal</button>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17587967409"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
